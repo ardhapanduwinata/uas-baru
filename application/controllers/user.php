@@ -36,4 +36,68 @@ class User extends CI_Controller {
         $this->load->view('mohon_maaf', $data);
         $this->load->view('header&footer/footer');
     }
+
+    public function manage_profile()
+    {
+        $data['title'] = "Manage Profile";
+        $data['siapa'] = $this->session->userdata('nama');
+        $data['role'] = $this->session->userdata('role');
+
+        $this->load->view('header&footer/header_user', $data);
+        $this->load->view('user/v_manage_profile_user', $data);
+    }
+
+    public function daftar_buku()
+    {
+        $data['title'] = "Manager";
+        $data['siapa'] = $this->session->userdata('nama');
+        $data['role'] = $this->session->userdata('role');
+//        $data['anggota'] = $this->m_admin->get_table('anggota')->result();
+
+        $this->load->view('header&footer/header_user', $data);
+        $this->load->view('user/v_daftarbuku_user', array('error' => ''));
+        $this->load->view('header&footer/footer_admin');
+        $this->load->view('v_modals');
+    }
+
+    public function peminjaman()
+    {
+        $data['title'] = "Manager";
+        $data['siapa'] = $this->session->userdata('nama');
+        $data['role'] = $this->session->userdata('role');
+//        $data['anggota'] = $this->m_admin->get_table('anggota')->result();
+
+        $this->load->view('header&footer/header_user', $data);
+        $this->load->view('user/v_peminjaman_user', array('error' => ''));
+        $this->load->view('header&footer/footer_admin');
+        $this->load->view('v_modals');
+    }
+
+    public function riwayat()
+    {
+        $data['title'] = "Manager";
+        $data['siapa'] = $this->session->userdata('nama');
+        $data['role'] = $this->session->userdata('role');
+//        $data['anggota'] = $this->m_admin->get_table('anggota')->result();
+
+        $this->load->view('header&footer/header_user', $data);
+        $this->load->view('user/v_riwayat_user', array('error' => ''));
+        $this->load->view('header&footer/footer_admin');
+        $this->load->view('v_modals');
+    }
+
+    public function save_session()
+    {
+        $nama = $this->input->post('nama');
+        $role = $this->input->post('role');
+
+        $data_session = array(
+            'nama' => $nama,
+            'status' => 'login',
+            'role' => $role
+        );
+        $this->session->set_userdata($data_session);
+
+        redirect(base_url('user/manage_profile'));
+    }
 }

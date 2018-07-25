@@ -16,7 +16,6 @@ class Login extends CI_Controller {
     {
         $data['title'] = "Login Admin";
 
-        $this->load->view('header&footer/header_admin', $data);
         $this->load->view('admin/v_login_admin', $data);
         $this->load->view('header&footer/footer_admin');
     }
@@ -28,12 +27,6 @@ class Login extends CI_Controller {
         $this->load->view('header&footer/header', $data);
         $this->load->view('login/v_login');
         $this->load->view('header&footer/footer', $data);
-    }
-
-    public function tampil_signup()
-    {
-        $data['user'] = $this->m_login->tampil_signup()->result();
-        $this->load->view('login/v_tampil_signup', $data);
     }
 
     public function signup()
@@ -135,6 +128,17 @@ class Login extends CI_Controller {
 
         }else{
             echo "Username dan password salah !";
+        }
+    }
+
+    function cek_validasi(){
+        $this->form_validation->set_rules('username','Username','required');
+        $this->form_validation->set_rules('password','Password','required');
+
+        if($this->form_validation->run() != false){
+            echo "Form validation oke";
+        }else{
+            $this->load->view('v_home');
         }
     }
 

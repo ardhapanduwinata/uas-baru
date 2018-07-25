@@ -23,5 +23,6 @@ class Home extends CI_Controller {
         $this->load->view('header&footer/header', $data);
 		$this->load->view('v_home', $data);
         $this->load->view('header&footer/footer');
+        $this->load->view('v_modals');
 	}
 }

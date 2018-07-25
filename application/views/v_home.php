@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('login/signup')?>">Sign Up</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#signup_modal" href="">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('login/login_anggota') ?>">Log In</a>
+                    <a class="nav-link" data-toggle="modal" data-target="#login_modal" href="">Log In</a>
                 </li>
             </ul>
         </div>
