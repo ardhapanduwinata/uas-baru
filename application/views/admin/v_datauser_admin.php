@@ -41,8 +41,8 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Username</th>
                             <th>Nama</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Action</th>
                         </tr>
@@ -50,8 +50,8 @@
                         <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Username</th>
                             <th>Nama</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Action</th>
                         </tr>
@@ -62,8 +62,8 @@
                         foreach($anggota as $a) {?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $a->username ?></td>
                             <td><?= $a->nama_anggota ?></td>
+                            <td><?= $a->username ?></td>
                             <td><?= $a->email_anggota ?></td>
                             <td><a class="btn btn-primary" href="<?= base_url('admin/edit_user/'.$a->id)?>">Edit</a>
                                 <a class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!')" href="<?= base_url('admin/delete_user/'.$a->id)?>">Delete</a>
@@ -74,7 +74,6 @@
                     </table>
                 </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
     </div>
     <!-- /.container-fluid-->

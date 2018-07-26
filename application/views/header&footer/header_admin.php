@@ -38,19 +38,33 @@
                 </a>
             </li>
             <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Buku">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBuku" data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-table"></i>
                     <span class="nav-link-text">Buku</span>
                 </a>
-                <ul class="sidenav-second-level collapse" id="collapseComponents">
+                <ul class="sidenav-second-level collapse" id="collapseBuku">
                     <li>
-                        <a href="navbar.html">Data Buku</a>
+                        <a href="<?= base_url('admin/load_databuku') ?>">Data Buku</a>
                     </li>
                     <li>
-                        <a href="cards.html">Data Penerbit</a>
+                        <a href="<?= base_url('admin/load_kategori') ?>">Kategori</a>
                     </li>
                     <li>
-                        <a href="">Data Kategori</a>
+                        <a href="<?= base_url('admin/load_penerbit') ?>">Penerbit</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Transaksi">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseTransaksi" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-wrench"></i>
+                    <span class="nav-link-text">Transaksi</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseTransaksi">
+                    <li>
+                        <a href="<?= base_url('admin/load_peminjaman') ?>">Data Peminjaman</a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url('admin/load_pengembalian') ?>">Data Pengembalian</a>
                     </li>
                 </ul>
             </li>

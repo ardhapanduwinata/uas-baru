@@ -15,5 +15,6 @@
 <script src="<?= base_url('assets/js/jqBootstrapValidation.js')?>"></script>
 <script src="<?= base_url('assets/js/contact_me.js')?>"></script>
 <script src="<?= base_url('assets/js/agency.min.js')?>"></script>
+<script src="<?= base_url('semantic/dist/semantic.min.js') ?>"></script>
 
 </html>

@@ -29,4 +29,14 @@ class M_admin extends CI_Model {
         $this->db->where($where);
         $this->db->update($table, $data);
     }
+
+    public function join_buku()
+    {
+        $this->db->select('*');
+        $this->db->from('buku b');
+        $this->db->join('kategori k', 'k.id = b.id_kategori', 'left');
+        $this->db->join('penerbit p', 'p.id = b.id_penerbit', 'left');
+        $query = $this->db->get();
+        return $query->result_array();
+    }
 }

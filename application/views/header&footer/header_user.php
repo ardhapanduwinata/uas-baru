@@ -9,6 +9,7 @@
     <meta name="author" content="">
     <title><?= $title ?></title>
     <!-- Bootstrap core CSS-->
+    <link rel="stylesheet" href="<?php echo base_url('semantic/dist/semantic.min.css') ?>">
     <link href="<?= base_url('assets/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets/vendor/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">

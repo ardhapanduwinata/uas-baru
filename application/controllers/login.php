@@ -9,10 +9,11 @@ class Login extends CI_Controller {
 
         $this->load->database();
         $this->load->helper('url');
+        $this->load->library('form_validation');
         $this->load->model('m_login');
     }
 
-    public  function login_admin()
+    public function login_admin()
     {
         $data['title'] = "Login Admin";
 
@@ -20,12 +21,12 @@ class Login extends CI_Controller {
         $this->load->view('header&footer/footer_admin');
     }
 
-    public  function login_anggota()
+    public function login_anggota()
     {
         $data['title'] = "Login Anggota";
 
         $this->load->view('header&footer/header', $data);
-        $this->load->view('login/v_login');
+        $this->load->view('v_home');
         $this->load->view('header&footer/footer', $data);
     }
 

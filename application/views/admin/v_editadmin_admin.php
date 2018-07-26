@@ -53,11 +53,7 @@
                                 <label for="email">Email address</label>
                                 <input class="form-control" name="email" id="email" type="email" value="<?= $u->email_admin ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input class="form-control" name="password" id="password" type="text" value="<?= $u->password ?>">
-                            </div>
-                            <div>
+                            <div style="float: right">
                                 <a class="btn btn-secondary" href="<?= base_url('admin/load_datauser') ?>">Cancel</a>
                                 <button class="btn btn-primary" type="submit">Edit</button>
                             </div>
@@ -65,7 +61,6 @@
                     <?php } ?>
                 </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
     </div>
     <!-- /.container-fluid-->

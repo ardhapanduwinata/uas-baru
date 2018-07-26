@@ -30,7 +30,7 @@
         <!-- Example DataTables Card-->
         <div class="card mb-3">
             <div class="card-header">
-                <i class="fa fa-table"></i> Data User
+                <i class="fa fa-table"></i> Data Admin
                 <a data-toggle="modal" data-target="#addadmin_modal">
                     <button class="btn btn-primary" style="float: right;"> Add Admin </button>
                 </a>
@@ -41,8 +41,8 @@
                         <thead>
                         <tr>
                             <th>No</th>
-                            <th>Username</th>
                             <th>Nama</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Action</th>
                         </tr>
@@ -50,8 +50,8 @@
                         <tfoot>
                         <tr>
                             <th>No</th>
-                            <th>Username</th>
                             <th>Nama</th>
+                            <th>Username</th>
                             <th>Email</th>
                             <th>Action</th>
                         </tr>
@@ -62,8 +62,8 @@
                         foreach($admin as $a) {?>
                             <tr>
                                 <td><?= $no++ ?></td>
-                                <td><?= $a->username ?></td>
                                 <td><?= $a->nama_admin ?></td>
+                                <td><?= $a->username ?></td>
                                 <td><?= $a->email_admin ?></td>
                                 <td><a class="btn btn-primary" href="<?= base_url('admin/edit_admin/'.$a->id)?>">Edit</a>
                                     <a class="btn btn-danger" onclick="return confirm('Anda Yakin?, Data akan dihapus Permanen!')" href="<?= base_url('admin/delete_admin/'.$a->id)?>">Delete</a>
@@ -74,7 +74,6 @@
                     </table>
                 </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
     </div>
     <!-- /.container-fluid-->

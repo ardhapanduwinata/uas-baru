@@ -42,10 +42,10 @@
                                     <label for="nama">Nama</label>
                                     <input type="hidden" name="id" value="<?= $u->id ?>">
                                     <input type="text" name="nama" class="form-control" id="nama" value="<?= $u->nama_anggota ?>">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="username">Username</label>
-                                    <input class="form-control" name="username" id="username" type="text" value="<?= $u->username ?>">
+                                    <div class="col-md-6">
+                                        <label for="username">Username</label>
+                                        <input class="form-control" name="username" id="username" type="text" value="<?= $u->username ?>">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -53,11 +53,7 @@
                             <label for="email">Email address</label>
                             <input class="form-control" name="email" id="email" type="email" value="<?= $u->email_anggota ?>">
                         </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input class="form-control" name="password" id="password" type="text" value="<?= $u->password ?>">
-                        </div>
-                        <div>
+                        <div style="float: right;">
                             <a class="btn btn-secondary" href="<?= base_url('admin/load_datauser') ?>">Cancel</a>
                             <button class="btn btn-primary" type="submit">Edit</button>
                         </div>
